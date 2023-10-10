@@ -1,0 +1,13 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@font-face {
+  font-family: 'FuturaPT';
+  src: url('~/assets/fonts/futura/FuturaPTDemi.otf') format('opentype');
+}
+
+@font-face {
+  font-family: 'RobotoFlex';
+  src: url('~/assets/fonts/roboto/static/RobotoFlex-Regular.ttf') format('truetype');
+}
