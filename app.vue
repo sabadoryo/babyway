@@ -443,7 +443,7 @@
             родов</p>
         </div>
       </div>
-      <div class="services-cards-list mt-[20px]" v-show="activeServicesTab === 'USA'">
+      <div class="services-cards-list mt-[20px] remove-20px-mt" v-show="activeServicesTab === 'USA'">
         <div class="services-card">
           <div class="services-card-title">Медицинское сопровождение</div>
           <p class="services-card-description mt-[4px]">Обеспечение клиентов квалифицированными врачами и медицинским
@@ -505,7 +505,7 @@
       <button class="show-all-button" v-show="showAllServices" @click="showAllServices = false">
         Скрыть
       </button>
-      <div class="services-cards-list-lg">
+      <div class="services-cards-list-lg" v-show="activeServicesTab === 'KZ'">
         <div class="services-cards-list-lg-row">
           <div class="services-cards-list-lg-item">
             <div class="services-card-title">Консультация и Информация</div>
@@ -1175,6 +1175,7 @@ export default {
       return `https://docs.google.com/forms/d/e/1FAIpQLScZGxwjfFFgCxBYzSls63RbLvRcQsH-aISLwsqcX6kq6pItlA/formResponse?&submit=Submit?usp=pp_url&entry.1999900339=${fullName}&entry.804883216=${city}&entry.356953516=${phoneNumber}&entry.1842695602=${email}&entry.480443205=${comment}`
     },
     async sendForm() {
+      console.log("OTPRAVLENYE")
       this.loading = true;
       this.error = false;
       if (this.fullName == "" || this.city == "" || this.phoneNumber == "" || this.email == "") {
@@ -1183,9 +1184,9 @@ export default {
         return;
       }
       try {
-        const resp = await $fetch(this.generateLink(this.fullName, this.city, this.phoneNumber, this.email, this.comment));
+        const resp = $fetch(this.generateLink(this.fullName, this.city, this.phoneNumber, this.email, this.comment), { retry: false });
       } catch (error) {
-        console.log(error)
+        return;
       }
       this.loading = false;
       this.success = true;
@@ -1193,7 +1194,7 @@ export default {
   },
 
   mounted() {
-    console.log(`The initial count is ${this.count}.`)
+    console.log(`Если вы это видите, то у вас сегодня будет отличный день!😀`)
   }
 }
 </script>
@@ -1269,6 +1270,7 @@ export default {
   font-style: normal;
   font-weight: 500;
   line-height: 18px;
+  cursor: pointer;
 }
 
 .footer-menu {
@@ -1652,7 +1654,7 @@ export default {
 }
 
 .section-1 {
-  background: url("~/assets/images/screen1bg.png");
+  background: url("~/assets/images/screen2.jpg");
   background-repeat: no-repeat;
   background-size: contain;
   padding: 20px 16px 60px 16px;
@@ -1717,6 +1719,7 @@ export default {
   line-height: 24px;
   letter-spacing: 0em;
   text-align: left;
+  cursor: pointer;
 }
 
 .about-us {
@@ -1873,6 +1876,7 @@ export default {
   font-style: normal;
   font-weight: 400;
   line-height: 18px;
+  cursor: pointer;
 }
 
 .about-city-tab-content-title {
