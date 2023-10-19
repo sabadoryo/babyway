@@ -1,4 +1,8 @@
 <template>
+  <Head>
+    <Title>USA BabyWay</Title>
+    <Meta name="description" content="USA BabyWay" />
+  </Head>
   <div class="container">
     <header class="header flex justify-between header-padding">
       <img class="mobile-logo" src="~/assets/images/babyway.png" />
