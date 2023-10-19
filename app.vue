@@ -215,7 +215,8 @@
           <div class="about-city-tab-content-all">
             <div class="about-city-tab-content-text">
               <h4 class="about-us-features-title mt-[20px]">Memorial Health University Medical Center</h4>
-              <p class="specialist-bio mt-[20px]">предоставляет высококачественную медицинскую и хирургическую помощь
+              <p class="specialist-bio mt-[20px] remove-20px-mt">предоставляет высококачественную медицинскую и
+                хирургическую помощь
                 пациентам
                 в Саванне и прилегающих округах.
                 Врачи медицинского центра готовы позаботиться о всей семье: от ведения беременности и акушерской помощи в
