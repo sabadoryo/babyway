@@ -18,4 +18,5 @@ export default defineNuxtConfig({
     }
   },
   buildModules: ["@nuxtjs/svg"],
+  modules: ['nuxt-simple-robots']
 })
