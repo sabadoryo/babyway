@@ -8,6 +8,7 @@ export default defineNuxtConfig({
       autoprefixer: {},
     },
   },
+  ssr: true,
   svg: {
     vueSvgLoader: {
     },
