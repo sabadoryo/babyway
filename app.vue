@@ -2,6 +2,8 @@
   <Head>
     <Title>USA BabyWay</Title>
     <Meta name="description" content="USA BabyWay" />
+    <Meta name="keywords"
+      content="'Роды в США' 'Роды в Америке' 'Роды в Саванне' 'Гражданство США' 'Гражданство Америки'" />
   </Head>
   <div class="container">
     <header class="header flex justify-between header-padding">
